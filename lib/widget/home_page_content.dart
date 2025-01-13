@@ -1,5 +1,5 @@
 import 'package:admin_app/models/child.dart';
-// import 'package:admin_app/models/inventory.dart';
+import 'package:admin_app/models/vaccine_inventory.dart';
 import 'package:admin_app/providers/children_provider.dart';
 import 'package:admin_app/providers/inventory_provider.dart';
 import 'package:flutter/material.dart';
@@ -10,18 +10,18 @@ class HomePageContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      padding: const EdgeInsets.all(16.0),
+    return const SingleChildScrollView(
+      padding: EdgeInsets.all(16.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const DashboardHeader(),
-          const SizedBox(height: 24),
-          const QuickStatsCards(),
-          const SizedBox(height: 24),
-          const UpcomingVaccinationsCard(),
-          const SizedBox(height: 24),
-          const LowInventoryAlert(),
+          DashboardHeader(),
+          SizedBox(height: 24),
+          QuickStatsCards(),
+          SizedBox(height: 24),
+          UpcomingVaccinationsCard(),
+          SizedBox(height: 24),
+          LowInventoryAlert(),
         ],
       ),
     );

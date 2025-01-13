@@ -1,4 +1,5 @@
 import 'package:admin_app/providers/children_provider.dart';
+import 'package:admin_app/screens/add_child_scree.dart';
 import 'package:admin_app/widget/child_list_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -15,7 +16,10 @@ class ChildrenListScreen extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          // TODO: Navigate to add child screen
+              Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => const AddChildScreen()),
+    );
         },
         child: const Icon(Icons.add),
       ),

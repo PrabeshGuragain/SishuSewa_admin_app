@@ -1,4 +1,5 @@
-import 'package:admin_app/models/inventory.dart';
+import 'package:admin_app/models/vaccine_inventory.dart';
+import 'package:admin_app/screens/inventory_detail_sreen.dart';
 import 'package:flutter/material.dart';
 
 class VaccineInventoryTile extends StatelessWidget {
@@ -19,7 +20,10 @@ class VaccineInventoryTile extends StatelessWidget {
         ],
       ),
       onTap: () {
-        // TODO: Navigate to inventory details screen
+         Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => InventoryDetailsScreen(vaccine: vaccine)),
+  );
       },
     );
   }

@@ -1,5 +1,6 @@
 
 import 'package:admin_app/models/child.dart';
+import 'package:admin_app/screens/child_detail_scree.dart';
 import 'package:flutter/material.dart';
 
 class ChildListTile extends StatelessWidget {
@@ -17,8 +18,10 @@ class ChildListTile extends StatelessWidget {
         color: child.parentAppId != null ? Colors.green : Colors.grey,
       ),
       onTap: () {
-        // TODO: Navigate to child details screen
-      },
+ Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => ChildDetailsScreen(child: child)),
+  );      },
     );
   }
 }

@@ -1,9 +1,9 @@
 // lib/providers/inventory_provider.dart
 import 'package:flutter/foundation.dart';
-import '../models/inventory.dart';  
+import '../models/vaccine_inventory.dart';  
 
 class InventoryProvider with ChangeNotifier {
-  List<VaccineInventory> _inventory = [];
+  final List<VaccineInventory> _inventory = [];
 
   List<VaccineInventory> get inventory => _inventory;
 

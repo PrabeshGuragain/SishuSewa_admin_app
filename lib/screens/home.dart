@@ -1,8 +1,10 @@
-import 'package:admin_app/screens/children_list_screen.dart';
-import 'package:admin_app/screens/inventory_screen.dart';
+// lib/screens/home.dart
+import 'package:admin_app/screens/add_child_scree.dart';
+import 'package:admin_app/widget/home_page_content.dart';
 import 'package:flutter/material.dart';
-import '../widget/home_page_content.dart';
-
+import 'children_list_screen.dart';
+import 'inventory_screen.dart';
+import 'add_vaccine_screen.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -34,7 +36,8 @@ class HomePage extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const ChildrenListScreen()),
+                  MaterialPageRoute(
+                      builder: (context) => const ChildrenListScreen()),
                 );
               },
             ),
@@ -44,7 +47,8 @@ class HomePage extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const InventoryScreen()),
+                  MaterialPageRoute(
+                      builder: (context) => const InventoryScreen()),
                 );
               },
             ),

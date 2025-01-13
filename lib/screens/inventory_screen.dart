@@ -2,6 +2,10 @@ import 'package:admin_app/providers/inventory_provider.dart';
 import 'package:admin_app/widget/vaccine_inventory_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:admin_app/screens/add_vaccine_screen.dart';
+
+
+
 
 
 class InventoryScreen extends StatelessWidget {
@@ -15,7 +19,10 @@ class InventoryScreen extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          // TODO: Navigate to add inventory screen
+           Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const AddVaccineScreen()),
+          );
         },
         child: const Icon(Icons.add),
       ),
